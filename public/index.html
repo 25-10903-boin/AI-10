@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reward Circuit Visualization</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #visualization { width: 100%; height: 500px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Reward Circuit Visualization</h1>
+    <div id="visualization"></div>
+
+    <script>
+        // Sample data for reward circuit
+        const data = [
+            { name: 'Circuit A', value: 75 },
+            { name: 'Circuit B', value: 50 },
+            { name: 'Circuit C', value: 90 },
+        ];
+
+        // Function to visualize data
+        function visualize(data) {
+            const container = document.getElementById('visualization');
+            data.forEach(circuit => {
+                const div = document.createElement('div');
+                div.style.width = circuit.value + '%';
+                div.style.height = '50px';
+                div.style.backgroundColor = 'lightblue';
+                div.style.margin = '5px 0';
+                div.innerText = circuit.name + ': ' + circuit.value + '%';
+                container.appendChild(div);
+            });
+        }
+
+        visualize(data);
+    </script>
+</body>
+</html>
