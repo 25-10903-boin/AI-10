@@ -1,0 +1,1 @@
+{\n  "name": "ai-reward-circuit-visualization",\n  "version": "1.0.0",\n  "description": "A web application for AI reward circuit visualization.",\n  "main": "server.js",\n  "scripts": {\n    "start": "node server.js"\n  },\n  "dependencies": {\n    "express": "^4.17.1",\n    "openai": "^2.3.0"\n  }\n}
